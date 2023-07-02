@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Promise Callback Example</title>
+  </head>
+  <body>
+    <h1>Promise Callback Example</h1>
+
+    <script>
+      function simulateAsyncTask() {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const randomNum = Math.random();
+
+            if (randomNum >= 0.5) {
+              resolve(randomNum);
+            } else {
+              reject("Task failed!");
+            }
+          }, 2000);
+        });
+      }
+
+      simulateAsyncTask()
+        .then((result) => {
+          document.write("First callback function: " + result + "<br>");
+          return result * 2;
+        })
+        .then(
+          (result) => {
+            document.write("Second callback function: " + result + "<br>");
+            return result * 3;
+          },
+          (error) => {
+            document.write("Error callback function: " + error + "<br>");
+          }
+        )
+        .then((result) => {
+          document.write("Third callback function: " + result + "<br>");
+        })
+        .catch((error) => {
+          document.write("Catch callback function: " + error + "<br>");
+        });
+    </script>
+  </body>
+</html>
