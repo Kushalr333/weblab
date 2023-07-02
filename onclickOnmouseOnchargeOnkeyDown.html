@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Demo</title>
+</head>
+<body>
+	<h1>Event Demo</h1>
+	<button id="myButton">Click me!</button>
+	<input type="text" id="myInput" placeholder="Type something...">
+	<p id="myParagraph">Hover over me!</p>
+	<script>
+		// onClick event
+		const button = document.getElementById("myButton");
+		button.addEventListener("click", () => {
+			document.write("Button clicked!");
+		});
+
+		// onMouseOver and onMouseOut events
+		const paragraph = document.getElementById("myParagraph");
+		paragraph.addEventListener("mouseover", () => {
+			paragraph.style.backgroundColor = "yellow";
+		});
+		paragraph.addEventListener("mouseout", () => {
+			paragraph.style.backgroundColor = "white";
+		});
+
+		// onChange event
+		const input = document.getElementById("myInput");
+		input.addEventListener("change", () => {
+			document.write("Input changed to: " + input.value);
+		});
+
+		// onKeyDown event
+		document.addEventListener("keydown", event => {
+			document.write("Key down: " + event.key);
+		});
+	</script>
+</body>
+</html>

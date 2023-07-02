@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        let startYear = parseInt(prompt("Enter start year:"));
+        let endYear = parseInt(prompt("Enter end year:"));
+
+        console.log("Leap years between " + startYear + " and " + endYear + ":");
+
+        for (let year = startYear; year <= endYear; year++) {
+            if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+                document.write(year);
+            }
+        }
+    </script>
+</body>
+
+</html>

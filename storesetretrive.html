@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        // Create a new Set
+        const mySet = new Set();
+
+        // Prompt the user to enter values to add to the Set
+        let input = prompt('Enter a value to add to the Set (or "done" to stop):');
+        while (input !== 'done') {
+            mySet.add(input);
+            input = prompt('Enter a value to add to the Set (or "done" to stop):');
+        }
+
+        // Retrieve values from the Set
+        input = prompt('Enter a value to check if it exists in the Set:');
+        document.write(mySet.has(input)); // Output: true or false
+
+        // Iterate over the Set
+        document.write('  Items in the Set:');
+        for (const item of mySet) {
+            document.write(item);
+        }
+
+
+    </script>
+</body>
+
+</html>

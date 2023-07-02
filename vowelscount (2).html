@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <p>Write a JavaScript code to process the name as the sample below.</p>
+    <script>
+        function countVowels(str) {
+            let vowelCount = 0;
+            const vowels = "aeiouAEIOU";
+            for (let i = 0; i < str.length; i++) {
+                if (vowels.includes(str[i])) {
+                    vowelCount++;
+                }
+            }
+            return vowelCount;
+        }
+
+        let sentence = prompt("Enter a sentence:");
+        let result = countVowels(sentence);
+        alert("The sentence contains " + result + " vowels.");
+
+    </script>
+</body>
+
+</html>
