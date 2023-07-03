@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>regex</title>
+
+<body style="background-color:aquamarine;">
+    <script>
+        function usn() {
+            const usnn = prompt("Enter NMIT USN");
+            var test = usnn.search(/^[1-4][a-z A-Z][a-z A-Z][0-9][0-9][A-Z a-z][A-Z a-z][0-9][0-9][0-9]$/);
+            var zerotest = usnn.search(/^[1-4][a-z A-Z][a-z A-Z][0-9][0-9][A-Z a-z][A-Z a-z][0][0][0]$/);
+            if (zerotest == 0) { alert("invalid usn"); }
+            else if (test == 0) { alert("valid usn"); }
+            else { alert("invalid usn"); }
+        }
+
+        function email() {
+            var text = prompt("Enter email id");
+            var mailformat = text.search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+            if (mailformat == 0) { alert("Valid email"); }
+            else { alert("invalid email"); }
+        }
+
+        function date() {
+            const inputString = prompt("Enter a string to search for a date in format dd/mm/yyyy");
+            const regex = /(0[1-9]|[1-2][0-9]|3[0-1])[\/\-](0[1-9]|1[0-2])[\/\-]([0-9][0-9][0-9][1-9])$/;
+            const match = inputString.match(regex);
+            if (match !== null) {
+                alert(match[0]);
+            }
+            else {
+                alert("No date found in the input string or invalid date.");
+            }
+        }
+    </script>
+
+    </head>
+
+    <body>
+        <div>
+            <marquee direction="left">KUSHAL R - 1nt21is405 - 6th sem C sec </marquee>
+        </div>
+        <hr />
+        <p>
+
+        <div>
+            Enter the USN
+            <div>USN :<button onclick="usn()">Validate VTU-USN</button></div>
+        </div>
+        <hr />
+        <div>
+            Enter the String Which contains a Date.
+            <div>SUBMIT :<button onclick="date()">Date search in a string</button></div>
+        </div>
+        <hr />
+        <div>
+            Enter the Email ID
+            <div>SUBMIT:<button onclick="email()">Validate E-mail id</button></div>
+        </div>
+        <hr />
+
+        </p>
+    </body>
+
+</html>
