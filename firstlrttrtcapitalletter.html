@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+  
+    <script>
+function capitalizeString(str) {
+  return str.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  });
+}
+
+// Example usage
+let inputString = "hello world";
+let capitalizedString = capitalizeString(inputString);
+console.log(capitalizedString); // Output: "Hello World"
+</script>
+</body>
+</html>
